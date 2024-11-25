@@ -86,7 +86,7 @@ Ref to the  [documentation](https://scapy.readthedocs.io/en/latest/usage.html#ge
 To run this program, you can use a command like the following in the terminal:
 `python3 Spoofing_ICMP.py -t 10.9.0.6 -s 192.168.5.6`
 Output on wireshark:
-seed.jpg
+![output.jpg](spf_icmp.png)
 
 
 
