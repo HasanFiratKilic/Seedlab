@@ -1,4 +1,4 @@
-Tasks and instructions : [https://seedsecuritylabs.org/Labs_20.04/Files/Sniffing_Spoofing/Sniffing_Spoofing.pdf]
+﻿Tasks and instructions : [https://seedsecuritylabs.org/Labs_20.04/Files/Sniffing_Spoofing/Sniffing_Spoofing.pdf]
 
 # Task 1
 
@@ -87,5 +87,6 @@ To run this program, you can use a command like the following in the terminal:
 `python3 Spoofing_ICMP.py -t 10.9.0.6 -s 192.168.5.6`
 Output on wireshark:
 seed.jpg
+
 
 
