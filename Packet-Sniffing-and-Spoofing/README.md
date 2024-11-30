@@ -198,7 +198,7 @@ Open another VM within the same subnet and use it to  `ping`  any host.
 
 With promiscuous mode on, the program can capture packets of those  `echo`  requests above. Otherwise, it will get nothing even if  `ping`  runs properly. Promiscuous mode enables the program to sniff any packet coming into the NIC regardless of its actual destination host. So with it turned on, we can get packets sent among other computers.
 ### Task 2.1B
-Change the  `[filter_exp[]](https://github.com/HasanFiratKilic/Seedlab/blob/32f28d1f88631e99f7198aae41199187619526af/Packet-Sniffing-and-Spoofing/sniff.c#L13)` or directly set the third argument of  `[pcap_compile()](https://github.com/HasanFiratKilic/Seedlab/blob/32f28d1f88631e99f7198aae41199187619526af/Packet-Sniffing-and-Spoofing/sniff.c#L18)` according to  BPF syntax.
+Change the  [`filter_exp[]`](https://github.com/HasanFiratKilic/Seedlab/blob/32f28d1f88631e99f7198aae41199187619526af/Packet-Sniffing-and-Spoofing/sniff.c#L13) or directly set the third argument of  [`pcap_compile()`](https://github.com/HasanFiratKilic/Seedlab/blob/32f28d1f88631e99f7198aae41199187619526af/Packet-Sniffing-and-Spoofing/sniff.c#L18) according to  BPF syntax.
 
 -   `icmp and src host 10.0.2.4 and dst host 10.0.2.15`
 -   `tcp portrange 10-100`
