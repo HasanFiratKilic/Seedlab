@@ -52,7 +52,7 @@ Ref to the  [documentation](https://scapy.readthedocs.io/en/latest/usage.html#ge
 -   `tcp dst port 23 and src host x.x.x.x`
 -   `net 128.230.0.0/16`
 ### Task 1.2: Spoofing ICMP Packets
-(link)
+[spoofing_icmp.py](https://github.com/HasanFiratKilic/Seedlab/blob/main/Packet-Sniffing-and-Spoofing/spoofing_icmp.py)
 
     from scapy.all import *
     import argparse
@@ -90,7 +90,7 @@ Output on wireshark:
 ![output.png](spf_icmp.png)
 
 ### Task 1.3: Traceroute
-(link)
+[traceroutr.py](https://github.com/HasanFiratKilic/Seedlab/blob/main/Packet-Sniffing-and-Spoofing/traceroute.py)
 
     from scapy.all import *
     import argparse
@@ -132,7 +132,7 @@ when the code is run for 8.8.8.8.8(Google).
 ![output.png](traceroute.png)
 
 ### Task 1.4: Sniffing and-then Spoofing
-(link)
+[Sniffing_and_then_Spoofing.py](https://github.com/HasanFiratKilic/Seedlab/blob/main/Packet-Sniffing-and-Spoofing/Sniffing_and_then_Spoofing.py)
 
     from scapy.all import *
     import argparse
@@ -188,7 +188,7 @@ First, it initializes a raw socket bound to the device (NIC) that is be listenin
 #### Question 2.
 If you want to set a BPF filter on the socket, packets received from the network are copied to the kernel. To listen on the socket and capture packets, it is necessary to access and modify something in kernel space, which requires root privilege. With such privilege, run `sniff` will show a `Segmentation fault` error message.
 #### Question 3.
-Change the third argument in (Line 22,  [`sniff.c(link)`]
+Change the third argument in (Line 22,  [`sniff.c`](https://github.com/HasanFiratKilic/Seedlab/blob/main/Packet-Sniffing-and-Spoofing/sniff.c)
 
     handle = pcap_open_live("enp0s3", BUFSIZ, 1, 1000, errbuf);
 
@@ -198,7 +198,7 @@ Open another VM within the same subnet and use it to  `ping`  any host.
 
 With promiscuous mode on, the program can capture packets of those  `echo`  requests above. Otherwise, it will get nothing even if  `ping`  runs properly. Promiscuous mode enables the program to sniff any packet coming into the NIC regardless of its actual destination host. So with it turned on, we can get packets sent among other computers.
 ### Task 2.1B
-Change the  `filter_exp[]` or directly set the third argument of  `pcap_compile()` according to  BPF syntax.
+Change the  `[filter_exp[]](https://github.com/HasanFiratKilic/Seedlab/blob/32f28d1f88631e99f7198aae41199187619526af/Packet-Sniffing-and-Spoofing/sniff.c#L13)` or directly set the third argument of  `[pcap_compile()](https://github.com/HasanFiratKilic/Seedlab/blob/32f28d1f88631e99f7198aae41199187619526af/Packet-Sniffing-and-Spoofing/sniff.c#L18)` according to  BPF syntax.
 
 -   `icmp and src host 10.0.2.4 and dst host 10.0.2.15`
 -   `tcp portrange 10-100`
