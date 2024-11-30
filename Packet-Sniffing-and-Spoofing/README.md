@@ -188,9 +188,9 @@ First, it initializes a raw socket bound to the device (NIC) that is be listenin
 #### Question 2.
 If you want to set a BPF filter on the socket, packets received from the network are copied to the kernel. To listen on the socket and capture packets, it is necessary to access and modify something in kernel space, which requires root privilege. With such privilege, run `sniff` will show a `Segmentation fault` error message.
 #### Question 3.
-Change the third argument in (Line 22,  [`sniff.c`](https://github.com/HasanFiratKilic/Seedlab/blob/main/Packet-Sniffing-and-Spoofing/sniff.c)
+Change the third argument in (Line 16,  [`sniff.c`](https://github.com/HasanFiratKilic/Seedlab/blob/main/Packet-Sniffing-and-Spoofing/sniff.c))
 
-    handle = pcap_open_live("enp0s3", BUFSIZ, 1, 1000, errbuf);
+    handle = pcap_open_live("br-376d10622cf3", BUFSIZ, 1, 1000, errbuf);
 
 If using a non-zero  `int`, the  _promiscuous mode_  is turned on. Otherwise, it is turned off. Keep the program run on the current VM.
 
